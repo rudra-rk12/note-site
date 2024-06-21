@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title%}Home{% endblock title%}
+
+{% block style%}
+    .slide-container{
+        background: antiquewhite;
+        height:600px;
+        width:100%;
+    }
+    .slide-container img{
+        margin-top:5px;
+    }
+{% endblock style%}
+    
+{% block content %}
+    <div class='container my-4'>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    {% comment %} <img src="/static/img/man_cycle.avif" class="d-block w-100" alt="Man-mountain-cycle" height=600 width=1500> {% endcomment %}
+                    <div class="slide-container d-flex justify-content-evenly align-items-center">
+                        <img src="/static/img/html_logo_nobg.png" style='width:30%;' alt="">
+                        <img src="/static/img/css3logo-nobg.png" style='width:30%;' alt="">
+                        <img src="/static/img/js logo.svg" style='width:30%;' alt="">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    {% comment %} <img src="/static/img/marathon.avif" class="d-block w-100" alt="Marathon" height=600 width=1500> {% endcomment %}
+                    <div class="slide-container d-flex justify-content-evenly align-items-center">
+                        <img src="/static/img/mongodblogo.svg" style='width:20%;' alt="">
+                        <img src="/static/img/expresslogo.svg" style='width:20%;' alt="">
+                        <img src="/static/img/reactlogo.svg" style='width:20%;' alt="">
+                        <img src="/static/img/nodejs-nobg.png" style='width:20%;' alt="">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    {% comment %} <img src="/static/img/men_cycling_grp.avif" class="d-block w-100" alt="Group Cycling" height=600 width=1500> {% endcomment %}
+                    <div class="slide-container d-flex justify-content-evenly align-items-center">
+                        <img src="/static/img/python_logo_nobg.png" style='width:25%;' alt="">
+                        <img src="/static/img/django.svg" style='width:25%;' alt="">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    {% comment %} <img src="/static/img/cardio_run.avif" class="d-block w-100" alt="Group Cycling" height=600 width=1500> {% endcomment %}
+                    <div class="slide-container d-flex justify-content-evenly align-items-center">
+                        <img src="/static/img/javalogo.png" style='width:25%;' alt="">
+                        <img src="/static/img/spring_logo.svg" style='width:25%;' alt="">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class='d-flex justify-content-center'>
+        <div class='border-bottom' style='width:1500px;'></div>
+    </div>
+{% endblock content%}
+
+{% block forscript %}
+<script>
+    let element = document.getElementById('home');
+    element.classList.add('active');
+</script>
+{% endblock forscript%}
